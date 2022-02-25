@@ -2232,11 +2232,12 @@ article h2 {
 	color: #281dc7 !important;
 	font-size: 1.8rem !important;
 	text-transform: uppercase;
+	text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 	background-color: #ffe100 !important;
 	margin-top: -35px !important;
 	margin-bottom: 1.5rem !important;
 	padding: 0.25em 0.5em !important;
-	z-index: 100 !important;
+	z-index: 10 !important;
 }
 
 
@@ -2335,7 +2336,7 @@ article h2 {
 .hero-slider {
 	position: relative !important;
 	display: block !important;
-	min-height: 240px !important;
+	min-height: 190px !important;
 	width: 100% !important;
 	height: auto !important;
 	z-index: 1 !important;
@@ -3050,10 +3051,18 @@ main.content {
 }
 
 
+
 .media-content h2 {
 	margin: 0.0rem auto !important;
+	padding-left: 0.5rem;
 }
 
+
+@media screen and (min-width: 768px) {
+	.media-content h2 {
+		padding-left: auto;
+	}
+}
 
 .card .content {
 	padding: 0px !important;
@@ -3103,10 +3112,48 @@ main.content {
 }
 
 
-.placeholder-div {
-	height: 120px !important;
+.schilder h1.site-title {
+	top: -465px !important;
 }
 
+
+.folien h1.site-title {
+	top: -465px !important;
+}
+
+
+.mietanlagen h1.site-title {
+	top: -610px !important;
+}
+
+
+.mobile-werbung h1.site-title {
+	top: -475px !important;
+}
+
+
+.banner h1.site-title {
+	top: -495px !important;
+}
+
+
+.kreativdruck h1.site-title {
+	top: -418px !important;
+}
+
+
+.placeholder-div {
+	height: 15px !important;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+	.placeholder-div {
+		height: 120px !important;
+	}
+}
 
 @media screen and (min-width: 768px) {
 
@@ -3121,7 +3168,6 @@ main.content {
 		color: #ffffff !important;
 		margin-bottom: 25px !important;
 	}
-
 
 	.schilder h1.site-title {
 		top: -235px !important;
@@ -3139,7 +3185,6 @@ main.content {
 
 
 	.kreativdruck h1.site-title {
-		color: #281dc7 !important;
 		top: -215px !important;
 	}
 

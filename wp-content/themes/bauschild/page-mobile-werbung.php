@@ -23,8 +23,6 @@ get_header(); ?>
 				 'post_status' => 'publish',
 				 'posts_per_page' => -1,
 				 'post_type' => 'products',
-				 'orderby'   => 'id',
-				 'order' => 'ASC',
 				 'product-category' => 'mobile-werbung',
 				);
 
