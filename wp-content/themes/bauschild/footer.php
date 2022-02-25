@@ -74,12 +74,12 @@
 		jQuery('.header__slider-carousel').slick({
 			dots: true,
 			infinite: true,
-			speed: 3500,
+			speed: 2500,
 			slidesToShow: 1,
 			adaptiveHeight: false,
 			arrows: false,
 			autoplay: true,
-			autoplaySpeed: 1500,
+			autoplaySpeed: 1200,
 			fade: true,
 			cssEase: 'ease-out'
 		});

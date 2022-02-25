@@ -1583,6 +1583,7 @@ a.navbar-item:active {
 	border-bottom: 2px solid #000000;
 	z-index: 95 !important;
 	margin-top: -24px !important;
+	margin-bottom: 100px !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -3082,6 +3083,82 @@ main.content {
 
 /* --- PAGE PRODUCTS --- */
 
+
+
+
+
+
+
+
+.schilder h1.site-title,
+.mietanlagen h1.site-title,
+.folien h1.site-title,
+.banner h1.site-title,
+.mobile-werbung h1.site-title,
+.kreativdruck h1.site-title {
+	position: relative !important;
+	top: -420px !important;
+	color: #ffffff !important;
+	margin-bottom: 25px !important;
+}
+
+
+.placeholder-div {
+	height: 120px !important;
+}
+
+
+@media screen and (min-width: 768px) {
+
+	.schilder h1.site-title,
+	.mietanlagen h1.site-title,
+	.folien h1.site-title,
+	.banner h1.site-title,
+	.mobile-werbung h1.site-title,
+	.kreativdruck h1.site-title {
+		position: relative !important;
+		top: -265px !important;
+		color: #ffffff !important;
+		margin-bottom: 25px !important;
+	}
+
+
+	.schilder h1.site-title {
+		top: -235px !important;
+	}
+
+
+	.folien h1.site-title {
+		top: -215px !important;
+	}
+
+
+	.mobile-werbung h1.site-title {
+		top: -215px !important;
+	}
+
+
+	.kreativdruck h1.site-title {
+		color: #281dc7 !important;
+		top: -215px !important;
+	}
+
+
+	.placeholder-div {
+		height: 45px !important;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
 .home .products-article,
 .products-article {
 	margin: 50px 25px !important;
@@ -3196,6 +3273,9 @@ main.content {
 	font-family: 'ClanOT News', sans-serif !important;
 	color: #000000 !important;
 }
+
+
+
 
 
 
@@ -3402,41 +3482,82 @@ main.content {
 .agb .table__agbs {
 	position: relative !important;
 	width: 100% !important;
+	height: auto;
 	font-size: 1.0rem !important;
+	overflow: hidden !important;
 }
 
 
 .agb .table__agbs tr {
 	text-align: left !important;
+	height: fit-content !important;
+}
+
+
+.agb .table__agbs td,
+.agb .table__agbs th  {
+	position: relative !important;
+
 }
 
 
 .agb .table__agbs td:first-child {
 	position: relative !important;
-	min-width: 25px;
-	width: 3% !important;
+	min-width: 50px !important;
+	width: 5% !important;
 }
 
 
 .agb .table__agbs td:nth-of-type(2) {
 	position: relative !important;
-	width: 15% !important;
+	min-width: 225px !important;
+	width: 100% !important;
 	text-decoration: underline;
+
 }
 
 
 .agb .table__agbs td:last-child {
 	position: relative !important;
-	width: 80% !important;
+	margin-left: -80% !important;
+	margin-top: 1.8rem !important;
+	display: block !important;
+	min-width: 280px !important;
+	width: 100% !important;
 }
 
 
 
+@media screen and (min-width: 768px) {
 
+	.agb .table__agbs td,
+	.agb .table__agbs th  {
+		position: relative !important;
+		padding-top: 8px !important;
+		padding-bottom: 8px !important;
+	}
 
+	.agb .table__agbs td:first-child {
+		position: relative !important;
+		min-width: 35px;
+		width: 5% !important;
+	}
 
+	.agb .table__agbs td:nth-of-type(2) {
+		position: relative !important;
+		width: 15% !important;
+		text-decoration: underline;
+	}
 
+	.agb .table__agbs td:last-child {
+		position: unset !important;
+		width: 70% !important;
+		margin-left: 0% !important;
+		margin-top: 0.0rem !important;
+		padding-right: 1.0rem !important;
+	}
 
+}
 
 
 

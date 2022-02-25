@@ -35,6 +35,7 @@ get_header(); ?>
 
 			?>
 
+			<h1 class="site-title" <?php echo 'style="background-color: ' . $category_color . '!important;' ; ?>; color: #ffffff !importent;"'><?php the_title(); ?></h1>
 
 			<?php $i = 0; // Counter für Spalten-Anzahl // ?>
 
@@ -92,12 +93,6 @@ get_header(); ?>
 			?>
 
 		</section>
-
-		<?php echo do_shortcode("[content_services]"); ?>
-
-		<?php echo do_shortcode("[content_newslettermotivation]"); ?>
-
-		<?php echo do_shortcode("[content_team]"); ?>
 
 	</main>
 

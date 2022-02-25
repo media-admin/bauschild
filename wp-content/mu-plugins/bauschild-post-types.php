@@ -176,7 +176,7 @@ function bauschild_taxonomies() {
 		'show_ui' => true,
 		'show_in_rest' => true,
 		'query_var' => true,
-		// 'rewrite' => array( 'slug' => 'produkte' ),
+		'rewrite' => array( 'slug' => 'produkte' ),
 	));
 
 }

@@ -678,24 +678,35 @@
 
 		<section class="hero hero-slider has-carousel">
 
-		<div id="carousel-slider" class="hero-carousel header__slider-carousel">
+			<div id="carousel-slider" class="hero-carousel header__slider-carousel">
 
-			<div class='has-background'>
-				<img class="is-background hero" src="<?php the_field('header-hero'); ?>">
-			</div>
+				<div class='has-background'>
+					<img class="is-background hero" src="<?php the_field('header-hero'); ?>">
+				</div>
 
-	</div>
+		</div>
 
-	</section>
+		</section>
 
-	<h1 class="site-title"><?php the_title(); ?></h1>
+		<h1 class="site-title"><?php the_title(); ?></h1>
 
 
 
-		<?php elseif (is_home() ) :
+		<?php elseif (is_page( array( 26, 28, 30, 32, 34, 36 ) ) ) : ?>
 
-		?>
+			<section class="hero hero-slider has-carousel">
 
+				<div id="carousel-slider" class="hero-carousel header__slider-carousel">
+
+					<div class="has-background">
+						<img class="is-background hero" src="<?php the_field('header-hero'); ?>">
+					</div>
+
+				</div>
+
+			</section>
+
+			<div class="placeholder-div">	&nbsp;</div>
 
 		<?php else : ?>
 
