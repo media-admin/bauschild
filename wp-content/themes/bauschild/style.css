@@ -2232,7 +2232,6 @@ article h2 {
 	color: #281dc7 !important;
 	font-size: 1.8rem !important;
 	text-transform: uppercase;
-	text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 	background-color: #ffe100 !important;
 	margin-top: -35px !important;
 	margin-bottom: 1.5rem !important;
@@ -3109,6 +3108,7 @@ main.content {
 	top: -420px !important;
 	color: #ffffff !important;
 	margin-bottom: 25px !important;
+	text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 
 
