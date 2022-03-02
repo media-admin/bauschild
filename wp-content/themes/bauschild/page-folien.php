@@ -92,6 +92,8 @@ get_header(); ?>
 
 		</section>
 
+		<?php echo do_shortcode("[content_newslettermotivation]"); ?>
+
 	</main>
 
 <?php get_footer(); ?>
