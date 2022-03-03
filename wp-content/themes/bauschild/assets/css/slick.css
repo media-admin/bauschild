@@ -39,7 +39,7 @@
 
     .slick-list
     {
-        min-height: 700px;
+        min-height: 800px;
 
     }
 
@@ -84,7 +84,7 @@
 @media screen and (min-width: 1408px) {
     .slick-track
     {
-         min-height: 700px;
+         min-height: 800px;
     }
 
 }
@@ -123,7 +123,7 @@
 
     .slick-slide
     {
-        min-height: 700px !important;
+        min-height: 800px !important;
         height: 100% !important;
     }
 
