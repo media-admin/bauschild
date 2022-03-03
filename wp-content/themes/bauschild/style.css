@@ -2782,7 +2782,7 @@ article h2 {
 
 
 .wpcf7 .ihre-nachricht textarea {
-	min-height: 400px !important;
+	min-height: 395px !important;
 }
 
 
@@ -2798,6 +2798,7 @@ article h2 {
 .wpcf7 input[type="checkbox"] {
 	position: relative !important;
 	line-height: 2.5rem !important;
+	margin-top: 0.5rem !important;
 	margin-right: 0px !important;
 	padding: 1.5rem 0.5rem !important;
 }
@@ -2825,6 +2826,32 @@ span.wpcf7-list-item-label a {
 	line-height: 1.0rem !important;
 	color: #fff !important;
 }
+
+
+
+.wpcf7-form-control-wrap .your-consent {
+	position: relative !important;
+	width: auto !important;
+	font-family: 'ClanOT Bold', sans-serif;
+	font-size: 1.0rem !important;
+	line-height: 1.0rem !important;
+	color: #000000 !important;
+	background-color: #ffffff !important;
+	border: 2px solid #000000 !important;
+	border-radius: 0px !important;
+	text-align: center !important;
+	opacity: 100% !important;
+	margin-left: 18px !important;
+	padding: 1.0rem 1.5rem !important;
+}
+
+
+
+.your-consent .wpcf7-list-item-label {
+	left: 18px !important;
+	margin-left: -1.0rem !important;
+}
+
 
 
 .wpcf7 .wpcf7-submit {
