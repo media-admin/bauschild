@@ -605,7 +605,7 @@
 
 		<?php if (is_front_page() ) : ?>
 
-		<section class="hero hero-slider has-carousel">
+		<section class="hero hero-slider has-carousel container">
 
 			<div id="carousel-slider" class="hero-carousel header__slider-carousel">
 

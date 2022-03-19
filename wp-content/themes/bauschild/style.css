@@ -2347,7 +2347,7 @@ article h2 {
 	.home .hero-slider {
 		position: relative !important;
 		display: block !important;
-		min-height: 700px !important;
+		min-height: 600px !important;
 		width: 100% !important;
 		height: auto !important;
 		overflow: hidden !important;
@@ -2396,7 +2396,8 @@ article h2 {
 	.hero .is-background {
 		height: auto !important;
 		width: 100% !important;
-		object-fit: cover !important;
+		/* object-fit: cover !important; */
+		object-fit: contain !important;
 		/* object-position: top center !important; */
 
 		object-position: 50% 100% !important;
@@ -2458,7 +2459,8 @@ article h2 {
 		width: 95% !important;
 		font-size: 4.2rem !important;
 		line-height: 4.4rem !important;
-		margin: 420px auto 0px auto !important;
+		margin: 350px auto 0px auto !important;
+		padding-top: 0px !important;
 	}
 
 }
@@ -2656,7 +2658,7 @@ article h2 {
 	.home .slick-slide {
 		/* display: none; */
 		float: left;
-		min-height: 700px  !important;
+		min-height: 600px  !important;
 		height: 100% !important;
 	}
 
