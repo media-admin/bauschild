@@ -3542,8 +3542,15 @@ main.content {
 
 
 
+/* --- PAGE NEWSLETTER-ANMELDUNG --- */
 
+@media screen and (min-width: 768px) {
 
+	#sib-container {
+		max-width: 50%;
+	}
+
+}
 
 
 
