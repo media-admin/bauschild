@@ -52,6 +52,14 @@ function medialab_register_styles() {
 	wp_enqueue_style( 'slick-theme' );
 
 
+	// Import SendIn Blue Styles
+	wp_register_style( 'sendin-blue', get_template_directory_uri() . '/assets/css/sendin-blue.css' );
+	wp_enqueue_style( 'sendin-blue' );
+
+	wp_register_style( 'sendin-blue-styles', 'https://sibforms.com/forms/end-form/build/sib-styles.css' );
+	wp_enqueue_style( 'sendin-blue-styles' );
+
+
 	// Import Import Cookie Script Stylesheets
 	wp_register_style( 'cookie-style', get_template_directory_uri() . '/vendor/dywc_1.1/dywc.css' );
 	wp_enqueue_style( 'cookie-style' );

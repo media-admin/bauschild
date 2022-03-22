@@ -253,7 +253,7 @@ if ( ! class_exists( 'SIB_Page_Form' ) ) {
 											<textarea class="widefat" cols="160" rows="20" id="sibformmarkup"
 														name="sib_form_html"><?php 
 														// phpcs:ignore
-														echo stripcslashes( $formData['html'] ); ?></textarea>
+														echo esc_html( $formData['html'] ); ?></textarea>
 																						<?php
 										}
 										?>
@@ -880,8 +880,13 @@ For your information, you cannot select a template with the tag [DOUBLEOPTIN].',
 			$form_name = isset( $_POST['sib_form_name'] ) ? sanitize_text_field( $_POST['sib_form_name'] ) : '';
 			// phpcs:disable
 			$form_html = isset( $_POST['sib_form_html'] ) ? wp_kses($_POST['sib_form_html'], SIB_Manager::wordpress_allowed_attributes()) : '';
+			$list_ids = '';
 
-			$list_ids = isset( $_POST['list_id'] ) ? maybe_serialize( $_POST['list_id'] ) : '';
+			if (!empty($_POST['list_id']) && is_array($_POST['list_id'])) {
+				$list_ids = array_filter($_POST['list_id'], 'is_int');
+				$list_ids = maybe_serialize($_POST['list_id']);
+			}
+
 			// phpcs:enable
 			$dependTheme = isset( $_POST['sib_css_type'] ) ? sanitize_text_field( $_POST['sib_css_type'] ) : '';
 			$customCss = isset( $_POST['sib_form_css'] ) ? sanitize_text_field( $_POST['sib_form_css'] ) : '';
@@ -1075,7 +1080,7 @@ For your information, you cannot select a template with the tag [DOUBLEOPTIN].',
 				}
 			}
 			$formData = array(
-				'html' => isset( $_POST['frmData'] ) ? $_POST['frmData'] : '',// phpcs:ignore
+				'html' => isset( $_POST['frmData'] ) ? wp_kses($_POST['frmData'], SIB_Manager::wordpress_allowed_attributes()) : '',// phpcs:ignore
 				'css' => isset( $_POST['frmCss'] ) ? sanitize_text_field($_POST['frmCss']) : '',
 				'dependTheme' => isset( $_POST['isDepend'] ) ? sanitize_text_field($_POST['isDepend']) : '',
 				'gCaptcha' => $gCaptcha,

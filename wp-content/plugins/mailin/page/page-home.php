@@ -693,7 +693,8 @@ if ( ! class_exists( 'SIB_Page_Home' ) ) {
 		public static function ajax_sync_users() {
 			check_ajax_referer( 'ajax_sib_admin_nonce', 'security' );
 			// phpcs:ignore
-			$postData = isset( $_POST['data'] ) ? $_POST['data'] : array();
+			//Data is being senitized/escaped while accessing
+			$postData = isset( $_POST['data'] ) ? $_POST['data'] : array(); 
 			if ( ! isset( $postData['sync_role'] ) ) {
 				wp_send_json(
 					array(
@@ -705,7 +706,7 @@ if ( ! class_exists( 'SIB_Page_Home' ) ) {
 				wp_send_json(
 					array(
 						'code' => 'attr_duplicated',
-						'message' => sprintf( esc_attr__( 'The attribute %s is duplicated. You can select one at a time.','mailin' ), '<b>' . $postData['errAttr'] . '</b>' ),
+						'message' => sprintf( esc_attr__( 'The attribute %s is duplicated. You can select one at a time.','mailin' ), '<b>' . esc_html($postData['errAttr']) . '</b>' ),
 					)
 				);}
 
@@ -728,7 +729,7 @@ if ( ! class_exists( 'SIB_Page_Home' ) ) {
 			foreach ( $roles as $role ) {
 				$users = get_users(
 					array(
-						'role' => $role,
+						'role' => sanitize_text_field($role),
 					)
 				);
 				if ( empty( $users ) ) {
@@ -749,7 +750,7 @@ if ( ! class_exists( 'SIB_Page_Home' ) ) {
                         }
 
 					}
-					$contentData .= "\n" . $userData;
+					$contentData .= "\n" . strip_tags($userData);
 				}
 			}
 			if ( '' == $contentData ) {
