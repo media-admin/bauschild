@@ -49,7 +49,7 @@ get_header(); ?>
 					<div class="team-member__data column">
 						<h2 class="team-member__name"><?php the_title(); ?></h2>
 						<p class="team-member__slogan"><?php the_field('zustaendigkeit'); ?></p>
-						<p class="team-member__description"><?php the_content(); ?></p>
+						<!-- <p class="team-member__description"><?php the_content(); ?></p> -->
 						<p class="team-member__phone"><a href="#"><?php the_field('telefonnummer'); ?></a></p>
 						<p class="team-member__mail"><a href="#"><?php the_field('e-mail-adresse'); ?></a></p>
 					</div>
