@@ -4,7 +4,7 @@ Tags: Email Marketing, Newsletter, Sendinblue, Forms, smtp, marketing automation
 Requires at least: 4.4
 Tested up to: 5.9
 Requires PHP: 5.6
-Stable tag: 3.1.37
+Stable tag: 3.1.38
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ Manage your contact lists, subscription forms and all email and marketing-relate
 <li><b>Transactional emails</b> - The wp_mail() function automatically uses Sendinblue’s SMTP for enhanced deliverability and tracking</li>
 <li><b>Statistics</b> - Real-time report dashboard gives you advanced insights into deliverability and performance: opens, clicks, bounce reports, etc.</li>
 <li><b>Marketing automation</b> - Enable Automation on WordPress to auto-install the script on your website and the identify tag on the Sendinblue forms and Wordpress Login </li>
-</ul> 
+</ul>
 
 = Subscription Forms =
 <ul>
@@ -30,7 +30,7 @@ Manage your contact lists, subscription forms and all email and marketing-relate
 <li>Use a double opt-in confirmation - you choose the template and the sender</li>
 <li>URL redirection</li>
 <li>Confirmation / error message customization</li>
-</ul> 
+</ul>
 
 = Contact Lists =
 <ul>
@@ -38,7 +38,7 @@ Manage your contact lists, subscription forms and all email and marketing-relate
 <li>CSV and TXT file import</li>
 <li>Unlimited custom fields</li>
 <li>Advanced segmentation. Example: Search for contacts who are less than 45 years who clicked links in my last 3 campaigns.</li>
-</ul> 
+</ul>
 
 = Marketing Campaigns =
 <ul>
@@ -47,7 +47,7 @@ Manage your contact lists, subscription forms and all email and marketing-relate
 <li>Subject and content personalization. Example: Hello {NAME},</li>
 <li>Inbox and design rendering tests for multiple devices and email clients</li>
 <li>Schedule campaigns in advance</li>
-</ul> 
+</ul>
 
 = Transactional Emails & Statistics =
 <ul>
@@ -61,17 +61,17 @@ Manage your contact lists, subscription forms and all email and marketing-relate
 <li>Auto-installation of the automation script on your website</li>
 <li>Auto-deployment of the identify tag for Sendinblue’s forms and Wordpress plugin</li>
 <li>Access to the Sendinblue online dashboard for workflow creation and management</li>
-</ul>  
+</ul>
 
 = Plugin Support =
 To get support, please send an email to <a href="mailto:contact@sendinblue.com">contact@sendinblue.com</a>, we will be happy to help you!
 
-The plugin is available in English and French. 
+The plugin is available in English and French.
 
 == Installation ==
 
-1.	In your WordPress admin panel, go to Plugins > New Plugin, search for "Sendinblue for WP" and click "Install now". Alternatively, download the plugin and upload the contents of mailin.zip to your plugins directory, which may be  /wp-content/plugins/. 
-2.	Activate the Sendinblue plugin through the 'Plugins' menu in WordPress. 
+1.	In your WordPress admin panel, go to Plugins > New Plugin, search for "Sendinblue for WP" and click "Install now". Alternatively, download the plugin and upload the contents of mailin.zip to your plugins directory, which may be  /wp-content/plugins/.
+2.	Activate the Sendinblue plugin through the 'Plugins' menu in WordPress.
 3.	The "Sendinblue" tab must appear in your WordPress side navigation panel, then set your <a href="https://my.sendinblue.com/advanced/apikey/?utm_source=wordpress_plugin&utm_medium=plugin&utm_campaign=addons_page" target="_blank">Sendinblue API key</a> in the plugin homepage.
 
 To get a Sendinblue API key, you have to <a href="https://app.sendinblue.com/account/register/?utm_source=wordpress_plugin&utm_medium=plugin&utm_campaign=addons_page" target="_blank">create an account</a>. It's free and takes less than 2 minutes!
@@ -100,7 +100,7 @@ The Sendinblue for WordPress plugin uses Sendinblue’s API to synchronize conta
 
 = Do I have to pay to use the plugin and send emails? =
 No, the plugin is totally free and Sendinblue offers a free forever plan with 9,000 emails per month. Additionally, Sendinblue comes with unlimited contacts (including on the free plan), so there is no hidden cost.
-If you need to send more than 300 emails / day, check out our pricing. Paid plans start at $25 / month to send up to 10 000 emails / month with no daily sending limit. 
+If you need to send more than 300 emails / day, check out our pricing. Paid plans start at $25 / month to send up to 10 000 emails / month with no daily sending limit.
 
 = How do I get my get synchronize my lists? =
 You have nothing to do – synchronization is automatic! It doesn’t matter whether your lists were uploaded on your WordPress interface or on your Sendinblue account: they will always remain up-to-date on both sides.
@@ -115,6 +115,10 @@ In order to create a signup form, you need to:
 2. Integrate the form in a sidebar using a widget from WP panel > Appearance > Widgets. The Sendinblue widget form should appear in your widgets list, you just to have to drag and drop the widget into the sidebar of your choice.
 
 == Changelog ==
+
+= 3.1.38 =
+* Bootstrap library updated to version 5.1.3.
+* Added support for the email address fields to comply with <a href="http://www.faqs.org/rfcs/rfc2822.html" target="_blank">RFC 2822</a>.
 
 = 3.1.37 =
 * Security fix include user input data sanitization.

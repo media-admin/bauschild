@@ -110,7 +110,7 @@ function bauschild_post_types() {
 			'all_items' => 'Alle Produkt-Arten',
 			'supports' => array('title', 'editor', 'author', 'custom-fields', ),
 		),
-		'has_archive' => true,
+		'has_archive' => false,
 		'exclude_from_search' => false,
 		// 'rewrite' => array('slug' => 'produkte', 'with_front' => true, 'pages' => true, 'feeds' => true,),
 		'menu_position' => 6,
@@ -176,7 +176,7 @@ function bauschild_taxonomies() {
 		'show_ui' => true,
 		'show_in_rest' => true,
 		'query_var' => true,
-		'rewrite' => array( 'slug' => 'produkte' ),
+		// 'rewrite' => array( 'slug' => 'produkte' ),
 	));
 
 }

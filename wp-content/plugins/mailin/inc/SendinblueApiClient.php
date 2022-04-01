@@ -14,7 +14,7 @@ class SendinblueApiClient
     const RESPONSE_CODE_CREATED = 201;
     const RESPONSE_CODE_ACCEPTED = 202;
     const RESPONSE_CODE_UNAUTHORIZED = 401;
-    const PLUGIN_VERSION = '3.1.37';
+    const PLUGIN_VERSION = '3.1.38';
     const USER_AGENT = 'sendinblue_plugins/wordpress';
 
     private $apiKey;
@@ -234,12 +234,12 @@ class SendinblueApiClient
         return $lists;
     }
 
-   /**
+    /**
      * @param $data
      * @return mixed
      */
     public function createFolder($data)
-    {   
+    {
         return $this->post("/contacts/folders", $data);
     }
 
@@ -389,7 +389,7 @@ class SendinblueApiClient
 
     /**
      * @param $data
-     * @return mixed all template list 
+     * @return mixed all template list
      */
     public function getAllEmailTemplates() {
         $templates = array(
@@ -413,7 +413,7 @@ class SendinblueApiClient
             $offset                += 50;
         } while ( ! empty( $templates['templates'] ) && count( $templates['templates'] ) < $template_data['count'] );
         $templates['count'] = count( $templates['templates'] );
-        
+
         return $templates;
     }
 }
