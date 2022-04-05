@@ -3322,6 +3322,7 @@ main.content {
 	.home .media-content h2,
 	.media-content h2 {
 		padding-left: 3.5rem !important;
+		padding-right: 3.5rem !important;
 	}
 
 }
