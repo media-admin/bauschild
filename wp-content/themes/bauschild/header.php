@@ -653,7 +653,10 @@
 
 			<div class="container short-description">
 
-				<p>RGH Weiss <strong>produziert, montiert und vermietet</strong> für Ihre wirksame Werbung stets Neues und Attraktives von der Beachflag zum unverzichtbaren Bauschild und bis zur großen Werbeanlage.</p>
+				<p>
+					RGH Weiss <strong>produziert, montiert und vermietet</strong> für Ihre wirksame Werbung stets Neues und Attraktives von der Beachflag<br>
+					zum unverzichtbaren Bauschild und bis zur großen Werbeanlage.
+				</p>
 
 				<p>Oft sind und waren wir die Ersten, die Neues produzier(t)en. Wer druckt z.B. direkt auf Glas und Alutafeln?</p>
 
