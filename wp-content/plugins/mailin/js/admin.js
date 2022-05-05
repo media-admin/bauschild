@@ -885,8 +885,12 @@ $jQ(document).ready(function(){
     });
 
     var attrFieldLine = $jQ('.sync-attr-line').html();
+    var appenderLine = $jQ('.sync-attr-plus-col').html();
     // sync add attr line filed
     $jQ('.modal-body').on('click', '.sync-attr-plus', function(){
+        $jQ(this).css('visibility', 'hidden');
+        $jQ(this).addClass('pb-2');
+        $jQ('.sync-attr-plus-col').append(appenderLine);
         $jQ('.sync-attr-line').append(attrFieldLine);
         $jQ('.sync-attr-dismiss').show();
     });
@@ -894,7 +898,11 @@ $jQ(document).ready(function(){
     $jQ('.modal-body').on('click', '.sync-attr-dismiss', function(){
         $jQ(this).closest('.sync-attr').remove();
         var attrCount = $jQ('.sync-attr').length;
-        if(attrCount == 1) $jQ('.sync-attr-dismiss').hide();
+        if(attrCount == 1) {
+            $jQ('.sync-attr-dismiss').hide();
+        } 
+        $jQ(`.sync-attr-plus-col .sync-attr-plus:nth-child(${attrCount - 1})`).css('visibility', 'show');
+        $jQ(`.sync-attr-plus-col .sync-attr-plus:nth-child(${attrCount})`).remove();
     });
 
     // set attribute matching

@@ -171,12 +171,13 @@ function bauschild_taxonomies() {
 
 
 	register_taxonomy('product-category', array('products'), array(
-		'hierarchical' => true,
+		'hierarchical' => false,
+		'has_archive' => false,
 		'labels' => $labels,
 		'show_ui' => true,
 		'show_in_rest' => true,
-		'query_var' => true,
-		// 'rewrite' => array( 'slug' => 'produkte' ),
+		'query_var' => false,
+		// 'rewrite' => array( 'slug' => 'produkte', 'with_front' => false ),
 	));
 
 }

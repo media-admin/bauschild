@@ -40,12 +40,13 @@
 
 					<div class="card">
 
-						<?php echo '<a href='. get_term_link( $term ) .'>' ?>
+
+							<?php echo '<a href=/produkte/'. $term->slug . '>' ?>
 
 						<?php
 
 							$image_id = get_field('produkt-kategorie-bild', $term, false); // 3rd arg set to false to ensure we get unformatted value (ID)
-							$image = wp_get_attachment_image_src($image_id, 'full');
+							$image = wp_get_attachment_image_src($image_id, 'large');
 
 							$color = get_field('produkt-kategorie-farbe', $term);
 

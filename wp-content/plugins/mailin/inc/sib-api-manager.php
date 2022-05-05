@@ -717,7 +717,7 @@ if ( ! class_exists( 'SIB_API_Manager' ) ) {
 		function unsubscribe() {
 			$mailin = new SendinblueApiClient();
 			$code = isset( $_GET['code'] ) ? sanitize_text_field( $_GET['code'] ) : '' ;
-			$list_id = isset( $_GET['li'] ) ? intval( esc_attr( $_GET['li'] ) ) : '' ;
+			$list_id = isset( $_GET['li'] ) ? intval( $_GET['li'] ) : '' ;
 
 			$email = base64_decode( strtr( $code, '-_', '+/' ) );
 			$data = array(

@@ -321,3 +321,8 @@ label[for="sib-statistics-date"] {
 .invisible {
     visibility: hidden;
 }
+
+.not-allowed {
+    cursor: not-allowed !important;
+    pointer-events: auto !important;
+}

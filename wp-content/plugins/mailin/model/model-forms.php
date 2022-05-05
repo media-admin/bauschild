@@ -17,6 +17,9 @@ if ( ! class_exists( 'SIB_Forms' ) ) {
 		 * Tab table name
 		 */
 		const TABLE_NAME = 'sib_model_forms';
+		const DEFAULT_FORM_HTML_PATH = '../form/default-form.html';
+		const DEFAULT_FORM_CSS_PATH = '../form/css/default-form.css';
+		const DEFAULT_FORM_MESSAGE_CSS_PATH = '../form/css/default-form-message.css';
 
 		/** Create Table */
 		public static function createTable() {
@@ -292,59 +295,9 @@ if ( ! class_exists( 'SIB_Forms' ) ) {
 
 		/** Get default form data */
 		public static function getDefaultForm() {
-			$html = <<<EOD
-<p class="sib-email-area">
-    <label class="sib-email-area">Email Address*</label>
-    <input type="email" class="sib-email-area" name="email" required="required">
-</p>
-<p class="sib-NAME-area">
-    <label class="sib-NAME-area">Name</label>
-    <input type="text" class="sib-NAME-area" name="NAME" >
-</p>
-<p>
-    <input type="submit" class="sib-default-btn" value="Subscribe">
-</p>
-EOD;
-			$css = <<<EOD
-[form] {
-    padding: 5px;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-[form] input[type=text],[form] input[type=email], [form] select {
-    width: 100%;
-    border: 1px solid #bbb;
-    height: auto;
-    margin: 5px 0 0 0;
-}
-[form] .sib-default-btn {
-    margin: 5px 0;
-    padding: 6px 12px;
-    color:#fff;
-    background-color: #333;
-    border-color: #2E2E2E;
-    font-size: 14px;
-    font-weight:400;
-    line-height: 1.4285;
-    text-align: center;
-    cursor: pointer;
-    vertical-align: middle;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-    white-space: normal;
-    border:1px solid transparent;
-    border-radius: 3px;
-}
-[form] .sib-default-btn:hover {
-    background-color: #444;
-}
-[form] p{
-    margin: 10px 0 0 0;
-}
-EOD;
+
+			$html = wp_kses(self::get_default_form_html(), SIB_Manager::SIB_ATTRIBUTE);
+			$css = wp_kses(self::get_default_css_html(), SIB_Manager::SIB_ATTRIBUTE);
 
 			$result = array(
 				'html' => $html,
@@ -360,34 +313,8 @@ EOD;
 
 		/** Get Default css */
 		public static function getDefaultMessageCss() {
-			$css = <<<EOD
-[form] p.sib-alert-message {
-    padding: 6px 12px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-[form] p.sib-alert-message-error {
-    background-color: #f2dede;
-    border-color: #ebccd1;
-    color: #a94442;
-}
-[form] p.sib-alert-message-success {
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #3c763d;
-}
-[form] p.sib-alert-message-warning {
-    background-color: #fcf8e3;
-    border-color: #faebcc;
-    color: #8a6d3b;
-}
-EOD;
-			return $css;
-
+			$css = file_get_contents(__DIR__ . '/' . self::DEFAULT_FORM_MESSAGE_CSS_PATH) ?: '';
+			return wp_kses($css, SIB_Manager::SIB_ATTRIBUTE);
 		}
 
 		/**
@@ -470,5 +397,20 @@ EOD;
 		    return $wpdb->get_var( "SHOW TABLES LIKE '" . self::TABLE_NAME . "'" ) == self::TABLE_NAME;
         }
 
+		/**
+		 * @return string
+		 */
+		public static function get_default_form_html()
+		{
+			return file_get_contents(__DIR__ . '/' . self::DEFAULT_FORM_HTML_PATH) ?: '';
+		}
+
+		/**
+		 * @return string
+		 */
+		public static function get_default_css_html()
+		{
+			return file_get_contents(__DIR__ . '/' . self::DEFAULT_FORM_CSS_PATH) ?: '';
+		}
 	}
 }

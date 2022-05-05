@@ -355,3 +355,19 @@ add_action('manage_posts_custom_column', 'medialab_preview_thumb_column', 10, 2)
 			acf_update_setting('google_api_key', 'AIzaSyAzkr3qs7g4-R6ShYWXKiJ5JZ_i5orikC8');
 	}
 	add_action('acf/init', 'my_acf_init');
+
+
+/* Get rid of the “Category:”, “Tag:”, “Author:”, “Archives:” and “Other taxonomy name:” */
+	add_filter( 'get_the_archive_title', function ($title) {
+		if ( is_category() ) {
+			$title = single_cat_title( '', false );
+		 } elseif ( is_tag() ) {
+			 $title = single_tag_title( '', false );
+		} elseif ( is_tax() ) {
+			$title = single_term_title( '', false );
+		} elseif ( is_author() ) {
+			$title = '<span class="vcard">' . get_the_author() . '</span>' ;
+	 }
+
+	 return $title;
+	});

@@ -59,11 +59,13 @@ class Sendinblue
 	 * @param int $expiry_time
 	 * @return void
 	 */
-	private function set_email_cookie(string $email)
+	private function set_email_cookie($email)
 	{
-		$expiry_time = self::get_default_cookie_expiry();
-		$domain = self::get_app_domain();
-		setcookie("email_id", sanitize_email($email), $expiry_time, "/", $domain, is_ssl());
+		if (is_string($email)) {
+			$expiry_time = self::get_default_cookie_expiry();
+			$domain = self::get_app_domain();
+			setcookie("email_id", sanitize_email($email), $expiry_time, "/", $domain, is_ssl());
+		}
 	}
 
 	public function identify($data)
@@ -131,16 +133,16 @@ class Sendinblue
 		}
 		//referrer
 		if (!array_key_exists('referrer', $data) && array_key_exists('HTTP_REFERER', $_SERVER)) {
-			$data['referrer'] = $_SERVER['HTTP_REFERER'];
+			$data['referrer'] = sanitize_text_field( wp_unslash( $_SERVER['HTTP_REFERER'] ) );
 		}
 		//pathname
 		if (!array_key_exists('pathname', $data)) {
-			$data['pathname'] = $_SERVER['REQUEST_URI'];
+			$data['pathname'] = sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) );
 		}
 
 		//name
 		if (!array_key_exists('name', $data)) {
-			$data['name'] = $_SERVER['REQUEST_URI'];
+			$data['name'] = sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) );
 		}
 
 		//store email cookie
