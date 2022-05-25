@@ -674,25 +674,7 @@
 			<div id="carousel-slider" class="hero-carousel header__slider-carousel">
 
 				<div class='has-background'>
-						<img class="is-background hero" src="<?php the_field('produkt-kategorie-bild'); ?>">
-
-					</div>
-
-		</div>
-
-		</section>
-
-		<h1 class="site-title"><?php the_title(); ?></h1>
-
-
-		<?php elseif (is_single( '' ) ) :?>
-
-		<section class="hero hero-slider has-carousel">
-
-			<div id="carousel-slider" class="hero-carousel header__slider-carousel">
-
-				<div class='has-background'>
-					<img class="is-background hero" src="<?php the_field('header-hero'); ?>">
+					<img class="is-background hero" src="<?php the_field('produkt-kategorie-bild'); ?>">
 				</div>
 
 		</div>
@@ -700,7 +682,6 @@
 		</section>
 
 		<h1 class="site-title"><?php the_title(); ?></h1>
-
 
 
 		<?php elseif (is_page( array( 26, 28, 30, 32, 34, 36 ) ) ) : ?>
