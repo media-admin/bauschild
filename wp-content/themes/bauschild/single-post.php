@@ -11,7 +11,7 @@ get_header( 'news' ); ?>
 
 	<section class="container">
 
-		<article class="article-standardpost container--white" <?php post_class(); ?> >
+		<article class="article-standardpost" <?php post_class(); ?> >
 
 			<div class="post-content container">
 

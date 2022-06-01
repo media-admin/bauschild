@@ -627,7 +627,7 @@
 			<div id="carousel-slider" class="hero-carousel header__slider-carousel">
 
 				<div class='has-background'>
-					<img class="is-background hero" src="<?php the_post_thumbnail('full', ['class' => 'article--header-img']); ?>">
+					<img class="is-background hero article--header-img" src="<?php the_field('header-hero'); ?>">
 				</div>
 
 		</div>
